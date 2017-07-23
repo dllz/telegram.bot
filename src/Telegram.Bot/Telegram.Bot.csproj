@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFramework>netstandard1.5</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Product>Telegram Bot API</Product>
     <Description>Telegram Bot API Class Library</Description>
@@ -18,6 +18,9 @@
     <RepositoryUrl>https://github.com/MrRoundRobin/telegram.bot.git</RepositoryUrl>
     <Version Condition="'$(APPVEYOR)' == 'True'">12.0.0-ci-$([System.DateTime]::Now.ToString("yyyyMMdd-HHmmss"))</Version>
     <VersionPrefix>12.0.0</VersionPrefix>
+    <Version>12.0.7</Version>
+    <AssemblyVersion>12.0.0.7</AssemblyVersion>
+    <PackageId>Telegram.Bot.Enforcer</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -26,6 +29,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <PackageReference Include="StackExchange.Redis" Version="1.2.3" />
   </ItemGroup>
 
 </Project>

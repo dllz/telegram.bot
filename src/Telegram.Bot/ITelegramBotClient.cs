@@ -32,7 +32,7 @@ namespace Telegram.Bot
         /// <summary>
         /// The current message offset
         /// </summary>
-        int MessageOffset { get; set; }
+        long MessageOffset { get; set; }
 
         #endregion  Config Properties
 

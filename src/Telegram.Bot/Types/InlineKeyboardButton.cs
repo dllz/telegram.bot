@@ -102,7 +102,7 @@ namespace Telegram.Bot.Types
         /// Initializes a new instance of the <see cref="InlineKeyboardButton"/> class.
         /// </summary>
         /// <param name="text">Text of the button</param>
-        private InlineKeyboardButton(string text)
+        public InlineKeyboardButton(string text)
         {
             Text = text;
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using StackExchange.Redis;
 using Telegram.Bot.Converters;
 
 namespace Telegram.Bot.Types
@@ -68,10 +69,10 @@ namespace Telegram.Bot.Types
         public static implicit operator long(ChatId chatid) => chatid.Identifier;
 
         /// <summary>
-        /// Create a <c>int</c> out of a <see cref="ChatId"/>
+        /// Create a <c>RedisValue</c> out of a <see cref="ChatId"/>
         /// </summary>
         /// <param name="chatid">The <see cref="ChatId"/></param>
-        public static implicit operator int(ChatId chatid) => checked((int) chatid.Identifier);
+        public static implicit operator RedisValue(ChatId chatid) => chatid.Identifier;
 
         /// <summary>
         /// Create a <c>string</c> out of a <see cref="ChatId"/>

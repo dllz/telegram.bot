@@ -57,7 +57,7 @@ namespace Telegram.Bot
         /// <summary>
         /// The current message offset
         /// </summary>
-        public int MessageOffset { get; set; }
+        public long MessageOffset { get; set; }
 
         #endregion Config Properties
 
